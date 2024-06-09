@@ -19,8 +19,8 @@ class Parser(Command):
         Parser.parserData.update({"parents" : [files]})
         super().__init__(subparsers, Parser.parserData) 
         self.parser.add_argument("-f", "--file-format", metavar="jpg|png", choices=["png", "jpg"], required=True)
-        self.parser.add_argument("-bc", "--background-color", metavar="hex", type=colorInput, default="transparent", help="The background color of the result image default [transparent]")
-        self.parser.add_argument("-dim", "--dimensions", metavar="wxh", help="The dimensions of the result image default [1024x1024]", default="1024x1024", action=dimAction)
+        self.parser.add_argument("-bc", "--background-color", metavar="hex", type=colorInput, default="transparent", help="The background color of the result image [default: transparent]")
+        self.parser.add_argument("-dim", "--dimensions", metavar="wxh", help="The dimensions of the result image [default: 1024x1024]", default="1024x1024", action=dimAction)
         self.setDefaultFunc()
         
 

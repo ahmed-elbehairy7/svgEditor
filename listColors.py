@@ -7,7 +7,7 @@ class Parser(Command):
     parserData = {
         "name" : "listColors",
         "help":"List available colors in the svg file", 
-        "aliases":["lc"]
+        "aliases":["l"]
     }
     
     def __init__(self, subparsers : _SubParsersAction, files) -> None:

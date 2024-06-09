@@ -12,6 +12,7 @@ filterwarnings("ignore", category=SyntaxWarning)
 def main():
     
     parser = ArgumentParser("svge", description="A program to edit svg files")
+    parser.add_argument("-v", "--version", action="version", version='%(prog)s v1.0.0')
     subparsers = parser.add_subparsers(dest="command", required=True, metavar="command")
     
     ####    src parser

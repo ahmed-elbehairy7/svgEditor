@@ -19,8 +19,8 @@ class Parser(Command):
         super().__init__(subparsers, Parser.parserData)    
         self.parser.add_argument("-oc", "--old-color", metavar="hex", help="The color you want to replace from the svg file", type=colorInput, required=True)
         self.parser.add_argument("-nc", "--new-color", metavar="hex", help="The color to replace with", action="extend", nargs='+', type=colorInput, required=True)
-        self.parser.add_argument("--no-fill", help="Don't replace fills only strokes", action="store_true")
-        self.parser.add_argument("--no-strokes", help="Don't replace strokes only fills", action="store_true")
+        self.parser.add_argument("--no-fill", help="Don't replace fills only strokes [default: false]", action="store_true")
+        self.parser.add_argument("--no-strokes", help="Don't replace strokes only fills [default: false]", action="store_true")
         self.setDefaultFunc()
     
         
